@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <form id="login-form" class="login-form">
+      <h2>Login</h2>
+      <label for="username">Nome de usuário:</label>
+      <input type="text" id="username" required>
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      window.location.href = `chat.html?username=${username}`;
+    });
+  </script>
+</body>
+</html>
